@@ -1,21 +1,9 @@
-def draw_xyz(N):
-    pattern = ""
-    return pattern
+def pow(x, n):
+    return 0
 
 if __name__ == '__main__':
-    print(draw_xyz(3))
-    """
-    Y Z X
-    Z Y X
-    Y Z X
-    """
-
-
-    print(draw_xyz(5))
-    """
-    Y Z X Z Y
-    X Y Z X Z
-    Y X Y Z X
-    Z Y X Y Z
-    X Z Y X Y
-    """
+    print(pow(2, 3)) # 8
+    print(pow(7, 2)) # 49
+    print(pow(10, 5)) # 100000
+    print(pow(17, 6)) # 24137569
+    print(pow(5, 3)) # 125

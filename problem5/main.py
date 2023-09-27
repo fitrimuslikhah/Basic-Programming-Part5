@@ -1,11 +1,9 @@
-def mean_median(array_input):
-    mean = 1.0
-    median = 1
-    return (mean, median)
+def pair_sum(arr, target):
+    return []
 
 if __name__ == '__main__':
-    print(mean_median([1, 2, 3, 4])) # (2.5, 2.5)
-    print(mean_median([1, 2, 3, 4, 5])) # (3.0, 3)
-    print(mean_median([7, 8, 9, 13, 15])) # (10.4, 9)
-    print(mean_median([10, 20, 30, 40, 50])) # (30.0, 30)
-    print(mean_median([15, 20, 30, 60, 120])) # (49.0, 30)
+    print(pair_sum([1, 2, 3, 4, 6], 6)) # [1, 3]
+    print(pair_sum([2, 5, 9, 11], 11)) # [0, 2]
+    print(pair_sum([1, 3, 5, 7], 12)) # [2, 3]
+    print(pair_sum([1, 4, 6, 8], 10)) # [1, 2]
+    print(pair_sum([1, 5, 6, 7], 6)) # [0, 1]

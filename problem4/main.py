@@ -1,10 +1,9 @@
-def ubah_huruf(sentence):
-    pattern = ""
-    return pattern
+def muncul_sekali(angka):
+    return []
 
 if __name__ == '__main__':
-    print(ubah_huruf("SEPULSA OKE")) # COZEVCK YUO
-    print(ubah_huruf("ALTERRA ACADEMY")) # KVDOBBK KMKNOWI
-    print(ubah_huruf("INDONESIA")) # SXNYXOCSK
-    print(ubah_huruf("GOLANG")) # QYVKXQ
-    print(ubah_huruf("PROGRAMMER")) # ZBYQBKWWOB
+    print(muncul_sekali("1234123")) # [4]
+    print(muncul_sekali("76523752")) # [6, 3]
+    print(muncul_sekali("12345")) # [1, 2, 3, 4, 5]
+    print(muncul_sekali("1122334455")) # []
+    print(muncul_sekali("0872504")) # [8, 7, 2, 5, 4]

@@ -1,21 +1,37 @@
 import unittest
-from main import cetak_table_perkalian
+from main import join_array_remove_duplicat
 
-class TestCetakTablePerkalian(unittest.TestCase):
-    def test_cetak_table_perkalian_9(self):
-        expected_output = (
-            " 1 2 3 4 5 6 7 8 9\n"
-            " 2 4 6 8 10 12 14 16 18\n"
-            " 3 6 9 12 15 18 21 24 27\n"
-            " 4 8 12 16 20 24 28 32 36\n"
-            " 5 10 15 20 25 30 35 40 45\n"
-            " 6 12 18 24 30 36 42 48 54\n"
-            " 7 14 21 28 35 42 49 56 63\n"
-            " 8 16 24 32 40 48 56 64 72\n"
-            " 9 18 27 36 45 54 63 72 81\n"
-        )
-        result = cetak_table_perkalian(9)
-        self.assertEqual(result, expected_output)
-        
+class TestJoinArrayRemoveDuplicate(unittest.TestCase):
+
+    def test_no_duplicates(self):
+        result = join_array_remove_duplicate(["apel", "anggur"], ["lemon", "leci", "nanas"])
+        expected = ["apel", "anggur", "lemon", "leci", "nanas"]
+        self.assertEqual(result, expected)
+
+    def test_with_duplicates(self):
+        result = join_array_remove_duplicate(["samsung", "apple"], ["apple", "sony", "xiaomi"])
+        expected = ["samsung", "apple", "sony", "xiaomi"]
+        self.assertEqual(result, expected)
+
+    def test_same_elements(self):
+        result = join_array_remove_duplicate(["football", "basketball"], ["basketball", "football"])
+        expected = ["football", "basketball"]
+        self.assertEqual(result, expected)
+
+    def test_empty_arrays(self):
+        result = join_array_remove_duplicate([], [])
+        expected = []
+        self.assertEqual(result, expected)
+
+    def test_one_empty_array(self):
+        result = join_array_remove_duplicate(["apple", "banana"], [])
+        expected = ["apple", "banana"]
+        self.assertEqual(result, expected)
+
+    def test_with_duplicates_and_empty(self):
+        result = join_array_remove_duplicate(["apple", "banana", "banana", "cherry"], ["cherry", "date", "date"])
+        expected = ["apple", "banana", "cherry", "date"]
+        self.assertEqual(result, expected)
+
 if __name__ == '__main__':
     unittest.main()

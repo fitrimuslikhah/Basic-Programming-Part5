@@ -1,41 +1,37 @@
 import unittest
-from main import ubah_huruf
+from main import muncul_sekali
 
-class TestUbahHuruf(unittest.TestCase):
-    def test_ubah_huruf_sentence_1(self):
-        input_sentence = "SEPULSA OKE"
-        expected_output = "COZEVCK YUO"
-        result = ubah_huruf(input_sentence)
-        msg = f"Expected: {expected_output}, Got: {result}"
-        self.assertEqual(result, expected_output, msg)
+class TestMunculSekali(unittest.TestCase):
 
-    def test_ubah_huruf_sentence_2(self):
-        input_sentence = "ALTERRA ACADEMY"
-        expected_output = "KVDOBBK KMKNOWI"
-        result = ubah_huruf(input_sentence)
-        msg = f"Expected: {expected_output}, Got: {result}"
-        self.assertEqual(result, expected_output, msg)
+    def test_example_1(self):
+        result = muncul_sekali("1234123")
+        expected = [4]
+        self.assertEqual(result, expected)
 
-    def test_ubah_huruf_sentence_3(self):
-        input_sentence = "INDONESIA"
-        expected_output = "SXNYXOCSK"
-        result = ubah_huruf(input_sentence)
-        msg = f"Expected: {expected_output}, Got: {result}"
-        self.assertEqual(result, expected_output, msg)
+    def test_example_2(self):
+        result = muncul_sekali("76523752")
+        expected = [6, 3]
+        self.assertEqual(result, expected)
 
-    def test_ubah_huruf_sentence_4(self):
-        input_sentence = "GOLANG"
-        expected_output = "QYVKXQ"
-        result = ubah_huruf(input_sentence)
-        msg = f"Expected: {expected_output}, Got: {result}"
-        self.assertEqual(result, expected_output, msg)
-        
-    def test_ubah_huruf_sentence_5(self):
-        input_sentence = "PROGRAMMER"
-        expected_output = "ZBYQBKWWOB"
-        result = ubah_huruf(input_sentence)
-        msg = f"Expected: {expected_output}, Got: {result}"
-        self.assertEqual(result, expected_output, msg)
-        
+    def test_example_3(self):
+        result = muncul_sekali("12345")
+        expected = [1, 2, 3, 4, 5]
+        self.assertEqual(result, expected)
+
+    def test_example_4(self):
+        result = muncul_sekali("1122334455")
+        expected = []
+        self.assertEqual(result, expected)
+
+    def test_example_5(self):
+        result = muncul_sekali("0872504")
+        expected = [8, 7, 2, 5, 4]
+        self.assertEqual(result, expected)
+
+    def test_empty_string(self):
+        result = muncul_sekali("")
+        expected = []
+        self.assertEqual(result, expected)
+
 if __name__ == '__main__':
     unittest.main()
