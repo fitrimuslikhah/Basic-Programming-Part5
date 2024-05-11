@@ -31,4 +31,4 @@ class TestPrimeNumber(unittest.TestCase):
         self.assertEqual(prime_number(1), False, "1 is not a prime number")
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(verbosity=2)
