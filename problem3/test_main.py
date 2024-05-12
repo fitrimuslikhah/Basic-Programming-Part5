@@ -1,16 +1,18 @@
 import unittest
-from main import join_array_remove_duplicat
+from main import join_array_remove_duplicate
 
 class TestJoinArrayRemoveDuplicate(unittest.TestCase):
 
     def test_no_duplicates(self):
         result = join_array_remove_duplicate(["apel", "anggur"], ["lemon", "leci", "nanas"])
         expected = ["apel", "anggur", "lemon", "leci", "nanas"]
+        expected.sort()
         self.assertEqual(result, expected)
 
     def test_with_duplicates(self):
         result = join_array_remove_duplicate(["samsung", "apple"], ["apple", "sony", "xiaomi"])
         expected = ["samsung", "apple", "sony", "xiaomi"]
+        expected.sort()
         self.assertEqual(result, expected)
 
     def test_same_elements(self):
@@ -23,6 +25,7 @@ class TestJoinArrayRemoveDuplicate(unittest.TestCase):
         expected = []
         self.assertEqual(result, expected)
 
+
     def test_one_empty_array(self):
         result = join_array_remove_duplicate(["apple", "banana"], [])
         expected = ["apple", "banana"]
@@ -34,4 +37,4 @@ class TestJoinArrayRemoveDuplicate(unittest.TestCase):
         self.assertEqual(result, expected)
 
 if __name__ == '__main__':
-    unittest.main(result)
+    unittest.main()
