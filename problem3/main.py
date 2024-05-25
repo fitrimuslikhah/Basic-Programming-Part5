@@ -8,7 +8,7 @@ def join_array_remove_duplicate(arrayA, arrayB):
         if data not in ans :
             ans.append(data)
     return ans
-    
+
 
 if __name__ == '__main__':
     # Test cases
